@@ -29,8 +29,3 @@ void ft_print_comb()
         hundred++;
     } 
 }
-int main()
-{
-    ft_print_comb();
-    return 0;
-}

@@ -6,7 +6,3 @@ void ft_putstr(char *str){
         i++;
     }
 }
-int main(){
-    char *b = "BONSOIR PARIIIS";
-    ft_putstr(b);
-}

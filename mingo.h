@@ -21,3 +21,4 @@ int ft_strlen(char *str);
 void ft_rev_int_tab(int *tab, int size);
 
 #endif // MINGO_H
+#include <stdio.h>

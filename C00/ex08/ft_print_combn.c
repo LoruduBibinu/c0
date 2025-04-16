@@ -44,9 +44,3 @@ void ft_print_combn(int nombre_chiffres) {
     ecrire_combinaison(nombre_chiffres, combinaison_actuelle, 0, 0);
 
 }
-
-int main() {
-    afficher_combinations(8);
-    write(1, "\n", 1); // Ajouter une nouvelle ligne à la fin
-    return 0;
-}
