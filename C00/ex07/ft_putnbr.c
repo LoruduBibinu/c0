@@ -3,9 +3,11 @@ void ft_write_number(int nb, int length){
     while (length > 0)
     {
         int divisor = 1;
-        for (int j = 1; j < length; j++)
+        int j = 1;
+        while(j < length)
         {
             divisor *= 10;
+           j++; 
         }
         char c = (nb / divisor) % 10 + '0';
         write(1, &c, 1);

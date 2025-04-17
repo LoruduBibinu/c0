@@ -5,7 +5,7 @@ void ft_readblespace(int count)
 }
 int main(void)
 {
-    /* int count = 0;
+     int count = 0;
     // Exemples d'appels de fonctions
     ft_readblespace(count);
     count++;
@@ -23,7 +23,7 @@ int main(void)
     ft_readblespace(count++);
     // ft_print_comb2();
     ft_readblespace(count++);
-    ft_putnbr(42);
+    ft_putnbr(42253);
     ft_readblespace(count++);
     ft_print_combn(5);
     ft_readblespace(count++);
@@ -46,9 +46,11 @@ int main(void)
     ft_readblespace(count++);
     ft_strlen("Hello");
     ft_readblespace(count++);
-    
+     int tab[] = {1, 2, 3, 4, 5};
+    ft_rev_int_tab(tab, 5);
     ft_readblespace(count++);
-
-     */int tab[] = {1, 2, 3, 4, 5};
-    ft_rev_int_tab(tab, 5);return 0;
+     
+   
+   
+    return 0;
 }
