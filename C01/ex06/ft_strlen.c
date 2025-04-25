@@ -1,9 +1,25 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: EIDOLONJIMA <r.grandco@gmail.com>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/04/25 18:03:33 by EIDOLONJIMA       #+#    #+#             */
+/*   Updated: 2025/04/25 18:06:17 by EIDOLONJIMA      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdio.h>
-int ft_strlen(char *str){
-    int i;
-    i = 0;  
-    while (str[i]){
-        i++;
-    }
-    return i;
+
+int	ft_strlen(char *str)
+{
+	int	i;
+	
+	i = 0;
+	while (str[i])
+	{
+		i++;
+	}
+	return (i);
 }

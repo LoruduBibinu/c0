@@ -1,3 +1,4 @@
 compiled/
 makefile
 /.vscode
+/norminette-env

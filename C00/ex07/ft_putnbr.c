@@ -1,53 +1,78 @@
-#include <unistd.h>
-void ft_write_number(int nb, int length){
-    while (length > 0)
-    {
-        int divisor = 1;
-        int j = 1;
-        while(j < length)
-        {
-            divisor *= 10;
-           j++; 
-        }
-        char c = (nb / divisor) % 10 + '0';
-        write(1, &c, 1);
-        length--;
-    }
-}
-int ft_check_negative(long int nb){
-    if (nb == 0)
-    {
-        write(1, "0", 1);
-    }
-    // inverse le nombre s'il est négatif
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: EIDOLONJIMA <r.grandco@gmail.com>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/04/25 15:53:28 by EIDOLONJIMA       #+#    #+#             */
+/*   Updated: 2025/04/25 18:37:50 by EIDOLONJIMA      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-    if (nb < 0)
-    {
-        write(1, "-", 1);
-        nb = nb * (-1);
-    }
-    return nb;
+#include <unistd.h>
+
+void	ft_write_number(int nb, int length)
+{
+	int		j;
+	char	c;
+	int		divisor;
+
+	while (length > 0)
+	{
+		divisor = 1;
+		j = 1;
+		while (j < length)
+		{
+			divisor *= 10;
+			j++;
+		}
+		c = (nb / divisor) % 10 + '0';
+		write(1, &c, 1);
+		length--;
+	}
 }
-int ft_is_integer(int nb){
-    if (nb < -2147483647 || nb > 2147483647)
-    {   write(1, "Error: parameter wasn't an integer", 35);
-        return 0;
-    }
-    return 1;
+
+int	ft_check_negative(long int nb)
+{
+	if (nb == 0)
+	{
+		write(1, "0", 1);
+	}
+	if (nb < 0)
+	{
+		write(1, "-", 1);
+		nb = nb * (-1);
+	}
+	return (nb);
 }
-void ft_putnbr(long int nb){
-    if (!ft_is_integer(nb)){
-        return;
-    }
-    int length = 0;
-    nb = ft_check_negative(nb);
-    // trouvons la longueur.
-    int tmp = nb;
-    while (tmp > 0)
-    {
-        tmp = tmp / 10;
-        length++;
-    }
-    // On a la longueur du nombre. mnt div par 10 et décrémentons.  1 102 /100 = 1 puis div par 10 = 10 donc modulo 10. div par length - 1
-   ft_write_number(nb, length);
+
+int	ft_is_integer(int nb)
+{
+	if (nb < -2147483647 || nb > 2147483647)
+	{
+		write(1, "Error: parameter wasn't an integer", 35);
+		return (0);
+	}
+	return (1);
+}
+
+void	ft_putnbr(long int nb)
+{
+	int	length;
+	int	tmp;
+
+	if (!ft_is_integer(nb))
+	{
+		return ;
+	}
+	length = 0;
+	nb = ft_check_negative(nb);
+	tmp = nb;
+	while (tmp > 0)
+	{
+		tmp = tmp / 10;
+		length++;
+	}
+	ft_write_number(nb, length);
 }

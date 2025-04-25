@@ -7,6 +7,7 @@ void	ft_readblespace(int count)
 
 void	ft_c00(int count)
 {
+	ft_readblespace(count++);
 	ft_putchar('A');
 	ft_readblespace(count++);
 	ft_print_alphabet();
@@ -24,7 +25,6 @@ void	ft_c00(int count)
 	ft_putnbr(42253);
 	ft_readblespace(count++);
 	ft_print_combn(5);
-	ft_readblespace(count++);
 }
 
 void	ft_c01_01(int count, int nbr)
@@ -36,6 +36,7 @@ void	ft_c01_01(int count, int nbr)
 
 	a = 5;
 	b = 10;
+	ft_readblespace(count++);
 	printf("nbr = %d\n", nbr);
 	ft_ft(&nbr);
 	printf("nbr = %d\n", nbr);
@@ -54,7 +55,7 @@ void	ft_c01_01(int count, int nbr)
 	ft_readblespace(count++);
 }
 
-void	ft_c01_02(int count)
+void	ft_c01_02()
 {
 	int	tab[5];
 
@@ -64,7 +65,6 @@ void	ft_c01_02(int count)
 	tab[3] = 4;
 	tab[4] = 5;
 	ft_rev_int_tab(tab, 5);
-	ft_readblespace(count++);
 }
 
 int	main(void)
@@ -75,7 +75,8 @@ int	main(void)
 	nbr = 0;
 	count = 0;
 	ft_c00(count);
+	printf("\n C01 \n");
 	ft_c01_01(count, nbr);
-	ft_c01_02(count);
+	ft_c01_02();
 	return (0);
 }

@@ -1,31 +1,42 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_comb.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: EIDOLONJIMA <r.grandco@gmail.com>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/04/24 19:20:33 by EIDOLONJIMA       #+#    #+#             */
+/*   Updated: 2025/04/24 19:29:10 by EIDOLONJIMA      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
-void ft_print_comb()
+
+void	ft_print_comb(void)
 {
-    char hundred;
-    char dozen;
-    char unit;
-    hundred = '0';
-    dozen = '0';
-    unit = '0'; //
-    while (hundred <='9')
-    {   
-        dozen = hundred + 1;
-        while (dozen <='9')
-        {
-            unit = dozen + 1;
-            
-            while (unit <='9')
-            {   
-                write(1, &hundred, 1);
-                write(1, &dozen, 1);
-                write(1, &unit, 1);
-                // la ligne dessous doit lorsque la boucle débute à 012 et se termine à 789, écrire rien. Le reste du temps, virgule espace
-                (!(hundred == '7' && dozen == '8' && unit == '9')) ? write(1,", ",1):write (1,"",1);
-                
-                unit++;
-            }
-            dozen++;
-        }
-        hundred++;
-    } 
+	char	hundred;
+	char	dozen;
+	char	unit;
+
+	hundred = '0';
+	dozen = '0';
+	unit = '0';
+	while (hundred <= '7')
+	{
+		dozen = hundred + 1;
+		while (dozen <= '8')
+		{
+			unit = dozen + 1;
+			while (unit <= '9')
+			{
+				write(1, &hundred, 1);
+				write(1, &dozen, 1);
+				write(1, &unit, 1);
+				write(1, ", ", 2);
+				unit++;
+			}
+			dozen++;
+		}
+		hundred++;
+	}
 }
