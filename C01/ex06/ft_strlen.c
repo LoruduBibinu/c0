@@ -6,7 +6,7 @@
 /*   By: EIDOLONJIMA <r.grandco@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 18:03:33 by EIDOLONJIMA       #+#    #+#             */
-/*   Updated: 2025/04/25 18:06:17 by EIDOLONJIMA      ###   ########.fr       */
+/*   Updated: 2025/04/25 18:53:16 by EIDOLONJIMA      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_strlen(char *str)
 {
 	int	i;
-	
+
 	i = 0;
 	while (str[i])
 	{
