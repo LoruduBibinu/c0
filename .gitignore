@@ -2,3 +2,4 @@ compiled/
 makefile
 /.vscode
 /norminette-env
+*.o
