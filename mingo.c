@@ -6,7 +6,7 @@
 /*   By: EIDOLONJIMA <r.grandco@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 18:52:39 by EIDOLONJIMA       #+#    #+#             */
-/*   Updated: 2025/04/25 18:52:40 by EIDOLONJIMA      ###   ########.fr       */
+/*   Updated: 2025/04/28 13:55:53 by EIDOLONJIMA      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,16 +67,33 @@ void	ft_c01_01(int count, int nbr)
 	ft_readblespace(count++);
 }
 
-void	ft_c01_02()
+void	ft_c01_02(int count)
 {
 	int	tab[5];
-
+	int size;
+	
+	size=5;
 	tab[0] = 1;
 	tab[1] = 2;
 	tab[2] = 3;
 	tab[3] = 4;
 	tab[4] = 5;
 	ft_rev_int_tab(tab, 5);
+	tab[0] = 12;
+	tab[1] = 32;
+	tab[2] = 31;
+	tab[3] = 14;
+	tab[4] = 51;
+	ft_readblespace(count++);
+	ft_sort_int_tab(tab,size);
+	int i = 0;
+	while (i < size)
+	{
+		printf("%d ", tab[i]);
+		i++;
+	}
+	
+	
 }
 
 int	main(void)
@@ -89,6 +106,6 @@ int	main(void)
 	ft_c00(count);
 	printf("\n C01 \n");
 	ft_c01_01(count, nbr);
-	ft_c01_02();
+	ft_c01_02(count);
 	return (0);
 }
